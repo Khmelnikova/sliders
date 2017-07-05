@@ -91,6 +91,7 @@ img {
 
 #viewport {
     width: 100%;
+    height: 100%;
     position: relative;
     overflow: hidden;
     -webkit-user-select: none;
@@ -103,7 +104,7 @@ img {
 
 #slidewrapper {
     position: relative;
-    width: calc(100% * 4);
+    width: calc(100%*5);
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
@@ -118,57 +119,51 @@ img {
 }
 
 .slide2 {
-    width: calc(100%/4);
+    width: calc(100%/5);
     list-style: none;
     display: inline;
     float: left;
 }
 
-.slide-img {
-    width: 100%;
+#slider3 {
+    padding:15px 0;
+}
+#slider3 .pagination {
+    list-style:none outside none;
+    padding:15px !important;
+}
+#slider3 .pagination li {
+    cursor:pointer;
+    display:inline-block;
+    margin-left:0;
+    background-color:#888;
+    border-radius:10px 10px 10px 10px;
+    height:8px;
+    text-indent:10000px;
+    width:8px;
+}
+#slider3 .pagination li.current {
+    background-color:#000;
+}
+#transitions {
+    overflow:hidden;
+}
+#transitions ul {
+    float:left;
+    list-style:none outside none;
+    padding:0;
+    width:33%;
+}
+#transitions ul#trans2D {
+    text-align:right;
+}
+#transitions ul li {
+    margin:0 10px;
 }
 
-#prev-btn, #next-btn {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    border-radius: 50%;
-    top: calc(50% - 25px);
+#warn {
+    font-weight:bold;
+    text-align:center;
 }
 
-#prev-btn:hover, #next-btn:hover {
-    cursor: pointer;
-}
 
-#prev-btn {
-    left: 20px;
-}
-
-#next-btn {
-    right: 20px;
-}
-
-#nav-btns {
-    position: absolute;
-    width: 100%;
-    bottom: 20px;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-.slide-nav-btn {
-    position: relative;
-    display: inline-block;
-    list-style: none;
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    border-radius: 50%;
-    margin: 3px;
-}
-
-.slide-nav-btn:hover {
-    cursor: pointer;
-}

@@ -26,9 +26,14 @@ function start(){
             url: "./src/2.json",
             pictures: [],
             display: function(pictures) {
+                var slidewrapper = document.getElementById("slidewrapper");
+                for(var i in pictures){
+                    slidewrapper.innerHTML+='<li class="slide2"><img src="' + pictures[i].img + '" class="slide-img"></li>'
+                }
+                
                 var slideNow = 1;
                 var slideCount = $('#slidewrapper').children().length;
-                var slideInterval = 3000;
+                var slideInterval = 2000;
                 var navBtnId = 0;
                 var translateWidth = 0;
 
@@ -39,28 +44,6 @@ function start(){
                         clearInterval(switchInterval);
                     }, function() {
                         switchInterval = setInterval(nextSlide, slideInterval);
-                    });
-
-                    $('#next-btn').click(function() {
-                        nextSlide();
-                    });
-
-                    $('#prev-btn').click(function() {
-                        prevSlide();
-                    });
-
-                    $('.slide-nav-btn').click(function() {
-                        navBtnId = $(this).index();
-
-                        if (navBtnId + 1 != slideNow) {
-                            translateWidth = -$('#viewport').width() * (navBtnId);
-                            $('#slidewrapper').css({
-                                'transform': 'translate(' + translateWidth + 'px, 0)',
-                                '-webkit-transform': 'translate(' + translateWidth + 'px, 0)',
-                                '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
-                            });
-                            slideNow = navBtnId + 1;
-                        }
                     });
                 });
 
@@ -105,7 +88,45 @@ function start(){
         {
             url: "./src/3.json",
             pictures: [],
-            display: function(pictures) {}
+            display: function(pictures) {
+                /*$(function(){
+                    if (! flux.browser.supportsTransitions) {
+                        $('#warn').text('Flux Slider requires a browser that supports CSS3 transitions').show();
+                    }
+
+                    window.mf = new flux.slider('#slider3', {
+                        autoplay: true,
+                        pagination: true,
+                        delay: 5000
+                    });
+
+                    // binding onclick events for our transitions
+                    $('.transitions').bind('click', function(event) {
+                        event.preventDefault();
+
+                        // we will inform member is any 3D transform not supported by browser
+                        if ($(event.target).closest('ul').is('ul#trans3d') && ! flux.browser.supports3d) {
+                            $('#warn').text("The '"+event.target.innerHTML+"' transition requires a browser that supports 3D transforms");
+                            $('#warn').animate({ 
+                              opacity: 'show' 
+                            }, 1000, '', function() {
+                                $(this).animate({opacity: 'hide'}, 1000);
+                            });
+                            return;
+                        }
+
+                        // using custom transition effect
+                        window.mf.next(event.target.id);
+                    });
+
+                    $('#controls').bind('click', function(event) {
+                        event.preventDefault();
+
+                        var command = 'window.mf.'+event.target.id+'();';
+                        eval(command);
+                    });
+                });*/
+            }
         },
         {
             url: "./src/4.json",
