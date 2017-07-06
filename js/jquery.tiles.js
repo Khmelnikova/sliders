@@ -137,7 +137,7 @@
       var self = this
         , o = self.opts
           // double-wrap in case a string is passed
-        , $nav = $( o.navWrap || '<div/>' )
+        , $nav = $( o.navWrap || '<div/>' ).addClass('tiles-nav')
         , links = [], $links, thumb
         , $next = $('<a href="#" class="tiles-next">Next &raquo;</a>')
         , $prev = $('<a href="#" class="tiles-prev">&laquo; Prev</a>')

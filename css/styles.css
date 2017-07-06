@@ -1,7 +1,6 @@
-body {
-  width: 100%;
-  margin: 0 auto;
-  overflow-y: scroll;
+
+header {
+  margin-top: 40px;
 }
 a {
   color: #088BBF;
@@ -18,12 +17,12 @@ h1 {
 }
 .slider-wrap {
   background: white;
-  padding: 0;
-  height: 100%;
+  height: 100wh;
+    width: 100%;
 }
 .slider {
-  width: 100%;
-  height: 100%;
+  width: 940px;
+  height: 400px;
 }
 .slider strong { color: #F0E10E; }
 article {
