@@ -96,7 +96,7 @@ function start(){
                     img.setAttribute("src", pictures[i].img)
                 }
                 $(function() {
-                    $('.slider').tilesSlider({ effect: 'switchlr', auto: true, loop: true })
+                    $('.slider').tilesSlider({x:20, y:1, effect: 'fliplr', backReverse: true, auto: true, loop: true })
                 })
             }
         },
