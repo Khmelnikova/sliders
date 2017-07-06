@@ -95,8 +95,8 @@ function start(){
                     slider.appendChild(img);
                     img.setAttribute("src", pictures[i].img)
                 }
-                $(document).ready(function() {
-                    $('.slider').tilesSlider({ auto: true })
+                $(function() {
+                    $('.slider').tilesSlider({ effect: 'switchlr', auto: true, loop: true })
                 })
             }
         },
