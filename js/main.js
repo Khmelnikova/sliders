@@ -131,7 +131,29 @@ function start(){
         {
             url: "./src/4.json",
             pictures: [],
-            display: function(pictures) {}
+            display: function(pictures) {
+               $(function(){
+                    var photos = [ ];
+                    
+                    for (p in pictures) {
+                        photos[p] = pictures[p].img;
+                    }
+                    
+                    var slideshow = $('#slideShow').bubbleSlideshow(photos);
+                    
+                    slideshow.autoAdvance(1000);
+                    
+                    //$(window).load(function(){    
+                    //});
+
+                    
+                    // Other valid method calls:
+                    
+                    // slideshow.showNext();
+                    // slideshow.showPrev();
+                    // slideshow.stopAutoAdvance();
+                });
+            }
         },
         {
             url: "./src/5.json",

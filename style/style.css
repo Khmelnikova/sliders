@@ -83,8 +83,8 @@ body {
 }
 
 img {
-   width: 100%;
-    height: 100vh;
+   width: 100% !important;
+    height: 100vh !important;
 }
 
 #block-for-slider {
@@ -170,5 +170,37 @@ img {
     font-weight:bold;
     text-align:center;
 }
+
+
+/* Slider 4 */
+/*-------------------------
+    Simple reset
+--------------------------*/
+
+
+/*-------------------------
+    General Styles
+--------------------------*/
+
+
+
+
+/*-------------------------------
+    Slideshow Customizations
+--------------------------------*/
+
+
+#slideShow{
+    margin:0;
+    border:0;
+    width:100%;
+    height:100vh;
+    box-shadow:5px 5px 0 rgba(22,22,22,0.3);
+}
+
+
+
+
+-----------------------------*/
 
 
